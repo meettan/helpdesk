@@ -26,7 +26,7 @@
                             <form class="pt-3" method="post" action="{{route('login')}}">
                                 @csrf
                                 <div class="form-group">
-                                    <input type="email" name="email" class="form-control form-control-lg" id="exampleInputEmail1"
+                                    <input type="text" name="user_id" class="form-control form-control-lg" id="exampleInputEmail1"
                                         placeholder="Username" required>
                                 </div>
                                 <div class="form-group">

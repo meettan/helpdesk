@@ -3,7 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
-
+use Session;
 class MyMiddleware
 {
     /**
@@ -15,6 +15,11 @@ class MyMiddleware
      */
     public function handle($request, Closure $next)
     {
-        return $next($request);
+        if(isset($user_detail)){
+            return $next($request);
+        }else{
+            return redirect('/'); 
+        }
+        
     }
 }
