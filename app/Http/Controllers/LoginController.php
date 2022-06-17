@@ -3,14 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Hash;
 class LoginController extends Controller
 {
     //
 
     public function ShowLogin()
     {
-        return view('login');
+        //return view('login');
+        echo Hash::make('123');
     }
     public function Login(Request $request)
     {
