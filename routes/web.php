@@ -19,4 +19,5 @@ Route::get('/', 'LoginController@ShowLogin')->name('login');
 Route::post('/Login', 'LoginController@Login')->name('login');
 Route::get('/dashboard', 'DashboardController@Show')->name('dashboard');
 Route::get('/logout', 'LoginController@logout')->name('logout');
+Route::get('/support', 'SupportController@index')->name('support');
 // Route::get('/logout', 'LoginController@logout');

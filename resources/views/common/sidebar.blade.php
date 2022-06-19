@@ -189,9 +189,9 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="{{route('support')}}">
                 <i class="mdi mdi-layers menu-icon"></i>
-                <span class="menu-title"> Category</span>
+                <span class="menu-title"> Support</span>
             </a>
         </li>
         <li class="nav-item">
