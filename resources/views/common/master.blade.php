@@ -8,13 +8,16 @@
     <title>Support</title>
     <link rel="stylesheet" href="{{ asset('public/vendors/mdi/css/materialdesignicons.min.css') }}">
     <link rel="stylesheet" href="{{ asset('public/vendors/css/vendor.bundle.base.css') }}">
-
     <link rel="stylesheet" href="{{ asset('public/vendors/datatables.net-bs4/dataTables.bootstrap4.css') }}">
-
-
     <link rel="stylesheet" href="{{ asset('public/css/vertical-layout-light/style.css') }}">
     <link rel="shortcut icon" href="{{ asset('public/images/favicon.png') }}" />
 </head>
+<style>
+  .required:after {
+    content:" *";
+    color: red;
+  }
+</style>
 
 <body>
     <div class="container-scroller">

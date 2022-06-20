@@ -189,31 +189,12 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{route('support')}}">
+            <a class="nav-link" href="{{route('supportlist')}}">
                 <i class="mdi mdi-layers menu-icon"></i>
                 <span class="menu-title"> Support</span>
             </a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="">
-                <i class="mdi mdi-layers menu-icon"></i>
-                <span class="menu-title"> Type</span>
-            </a>
-        </li>
-        <!-- purchase -->
-        <li class="nav-item">
-            <a class="nav-link" href="#">
-                <i class="mdi mdi-layers menu-icon"></i>
-                <span class="menu-title">Purchase</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="">
-                <i class="mdi mdi-layers menu-icon"></i>
-                <span class="menu-title">Sale</span>
-            </a>
-        </li>
-      
+    
         <!-- <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-advanced" aria-expanded="false"
                 aria-controls="ui-advanced">
