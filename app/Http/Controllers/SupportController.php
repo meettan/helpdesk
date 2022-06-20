@@ -21,6 +21,7 @@ class SupportController extends Controller
         return view('support_list',['complains'=>$complains]);
     }
     public function addcomplain(Request $request){
+        Support::where('project_id',$suser[0]->project_id)->orderBy('ticket_no','DESC')->first();
         $suser =  Session::get('user_detail');
         $imageName1 = time().'.'.$request->doc1->extension();  
         $imageName2 = time().'.'.$request->doc2->extension();  

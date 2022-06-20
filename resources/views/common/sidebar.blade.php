@@ -194,6 +194,12 @@
                 <span class="menu-title"> Support</span>
             </a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('logout')}}">
+                <i class="mdi mdi-layers menu-icon"></i>
+                <span class="menu-title"> Logout</span>
+            </a>
+        </li>
     
         <!-- <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-advanced" aria-expanded="false"
