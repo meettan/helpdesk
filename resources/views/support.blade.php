@@ -43,9 +43,9 @@
                                     <tr class="text-right" id="row_1">
                                         <td class="text-left">1</td>
                                         
-                                        <td><input type="file" class="form-control" name="doc1" id="quantity_1"
+                                        <td><input type="file" class="form-control" name="doc1" id="doc1"
                                                 placeholder=""></td>
-                                        <td><input type="file" class="form-control" name="doc2" id="quantity_1"
+                                        <td><input type="file" class="form-control" name="doc2" id="doc2"
                                                 placeholder=""></td>
                                     </tr>
                                     

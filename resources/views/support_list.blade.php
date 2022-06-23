@@ -8,6 +8,9 @@
                 <!-- <button class="btn btn-info d-none d-md-block">Import</button> -->
             <div class="card-body d-flex align-items-center justify-content-between">
                 <h4 class="mt-1 mb-1">Liquor Type</h4>
+                @if(Session::has('msg'))
+                {{Session::get('msg')}}
+                @endif
                 <!-- <h4 class="mt-1 mb-1">Hi, Welcomeback!</h4> -->
                <a href='{{('support')}}'> <button class="btn btn-info d-none d-md-block">Add</button></a>
             </div>
@@ -21,6 +24,8 @@
                                     <!-- <th>Purchased On</th> -->
                                     <th>Title</th>
                                     <th>Content</th>
+                                    <th>Doc First</th>
+                                    <th>Doc Second</th>
                                     <th>Ticket No</th>
                                     <!-- <th>Ship to</th>
                                     <th>Base Price</th>
@@ -36,6 +41,8 @@
                                     <td>{{$i++}}</td>
                                     <td>{{$complain->title}}</td>
                                     <td>{{$complain->content}}</td>
+                                    <td>{{$complain->doc1}}</td>
+                                    <td>{{$complain->doc2}}</td>
                                     <td>{{$complain->ticket_no}}</td>
                                     <!-- <td>
                                         <label class="badge badge-info">On hold</label>
