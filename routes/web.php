@@ -11,10 +11,6 @@ use App\Http\Middleware\MyMiddleware;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-// Route::get('/', function () {
-//     return view('login');
-// });
 Route::get('/', 'LoginController@ShowLogin')->name('login');
 Route::post('/Login', 'LoginController@Login')->name('login');
 Route::get('/dashboard', 'DashboardController@Show')->name('dashboard');
