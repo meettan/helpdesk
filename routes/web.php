@@ -19,3 +19,5 @@ Route::get('/support', 'SupportController@index')->name('support');
 Route::get('/supportlist', 'SupportController@complains')->name('supportlist');
 Route::post('/addcomplain', 'SupportController@addcomplain')->name('addcomplain');
 // Route::get('/logout', 'LoginController@logout');
+//   ********************* ROUE CODE fOR  ADMIN   *************   //
+Route::get('/complreceived', 'SupportController@complreceived')->name('complreceived');
