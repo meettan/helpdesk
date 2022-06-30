@@ -1,6 +1,6 @@
 <?php
 namespace App\Http\Controllers;
-
+use Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\User;
@@ -19,14 +19,16 @@ class LoginController extends Controller
         // return $request;
         $student = User::where('user_id', '=', $request->user_id)->get();
         // $student = User::where('email', '=', $request->email)->where('active', 'Y')->get();
-        // return $student;
+         //return $student;
         if (count($student) > 0) {
             // if ($student[0]->email_verified == 'Y') {
                 //attempt to login the admins in
+                //$student = User::where('user_id', '=', $request->user_id)->first();
                 if (Auth::guard('web')->attempt(['user_id' => $request->user_id, 'password' => $request->password])) {
                     // session()->forget('login_register_page');
                     // return redirect(session('url.intended'));
-                    session(['user_detail' => $student]);
+                     session(['user_detail' => $student]);
+                    //session::put('username', $student[0]->user_name);
                     return redirect()->route('dashboard');
                 }
                 //if unsuccessfull redirect back to the login form with form data
@@ -43,6 +45,7 @@ class LoginController extends Controller
 
     }
     public function logout(Request $request) {
+        Session::flush();
         Auth::logout();
         return redirect('/');
     }

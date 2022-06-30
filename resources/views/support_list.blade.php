@@ -7,7 +7,7 @@
             <!-- <h4 class="card-title">Liquor Type</h4> -->
                 <!-- <button class="btn btn-info d-none d-md-block">Import</button> -->
             <div class="card-body d-flex align-items-center justify-content-between">
-                <h4 class="mt-1 mb-1">Liquor Type</h4>
+                <h4 class="mt-1 mb-1">Support Added</h4>
                 @if(Session::has('msg'))
                 {{Session::get('msg')}}
                 @endif
@@ -41,8 +41,8 @@
                                     <td>{{$i++}}</td>
                                     <td>{{$complain->title}}</td>
                                     <td>{{$complain->content}}</td>
-                                    <td>{{$complain->doc1}}</td>
-                                    <td>{{$complain->doc2}}</td>
+                                    <td><img src="public/uploads/{{$complain->doc1}}" alt="Doc1" width="500" height="600"></td>
+                                    <td><img src="public/uploads/{{$complain->doc2}}" alt="Doc2" width="500" height="600"></td>
                                     <td>{{$complain->ticket_no}}</td>
                                     <!-- <td>
                                         <label class="badge badge-info">On hold</label>

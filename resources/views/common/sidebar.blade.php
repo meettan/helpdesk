@@ -188,12 +188,23 @@
                 <span class="menu-title">Dashboard</span>
             </a>
         </li>
+        
+        @if(Session::get('user_detail')[0]->user_type == 'U')
         <li class="nav-item">
             <a class="nav-link" href="{{route('supportlist')}}">
                 <i class="mdi mdi-layers menu-icon"></i>
                 <span class="menu-title"> Support</span>
             </a>
         </li>
+    
+        @elseif(Session::get('user_detail')[0]->user_type == 'A')
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('complreceived')}}">
+                <i class="mdi mdi-layers menu-icon"></i>
+                <span class="menu-title"> Support received</span>
+            </a>
+        </li>
+        @endif
         <li class="nav-item">
             <a class="nav-link" href="{{route('logout')}}">
                 <i class="mdi mdi-layers menu-icon"></i>

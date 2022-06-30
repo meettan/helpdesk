@@ -4,6 +4,8 @@ use Session;
 use Illuminate\Http\Request;
 use DB;
 use App\Support;
+use Auth;
+ 
 class SupportController extends Controller
 {
     public function __constructor()
@@ -15,7 +17,9 @@ class SupportController extends Controller
         return view('support');
     }
     public function complains(Request $request){
+        // return auth()->user;
         $suser =  Session::get('user_detail');
+        // return Session::get('user_detail')[0]->user_name;
         $complains=Support::where('created_by',$suser[0]->id)->get();
         return view('support_list',['complains'=>$complains]);
     }
@@ -56,5 +60,12 @@ class SupportController extends Controller
         Session::flash('msg','Data added successfully');
         return redirect('/supportlist');
        
+    }
+    public function complreceived(Request $request){
+        $suser =  Session::get('user_detail');
+        $complains=Support::join('md_users', 'md_users.id', '=', 'td_support.created_by')
+                   ->select('td_support.*', 'md_users.district')
+                    ->get();
+        return view('support_received',['complains'=>$complains]);
     }
 }
