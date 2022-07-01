@@ -21,17 +21,14 @@
                             <thead>
                                 <tr>
                                     <th> #</th>
-                                    <!-- <th>Purchased On</th> -->
+                                    
                                     <th>Title</th>
                                     <th>Content</th>
                                     <th>Doc First</th>
                                     <th>Doc Second</th>
                                     <th>Ticket No</th>
-                                    <!-- <th>Ship to</th>
-                                    <th>Base Price</th>
-                                    <th>Purchased Price</th>
-                                    <th>Status</th> -->
-                                    <!-- <th>Actions</th> -->
+                                    <th>Status</th>
+                                    
                                 </tr>
                             </thead>
                             <tbody>
@@ -44,12 +41,16 @@
                                     <td><img src="public/uploads/{{$complain->doc1}}" alt="Doc1" width="500" height="600"></td>
                                     <td><img src="public/uploads/{{$complain->doc2}}" alt="Doc2" width="500" height="600"></td>
                                     <td>{{$complain->ticket_no}}</td>
-                                    <!-- <td>
-                                        <label class="badge badge-info">On hold</label>
-                                    </td> -->
-                                    <!-- <td>
-                                        <button class="btn btn-outline-primary">View</button>
-                                    </td> -->
+                                    <td>
+                                    @if($complain->status == '0')
+                                    Pending
+                                    @elseif($complain->status == '1')
+                                    Working
+                                    @elseif($complain->status == '2')
+                                    Resolved
+                                    @endif
+                                    </td>
+                                   
                                 </tr>
                                 @endforeach
                             </tbody>
